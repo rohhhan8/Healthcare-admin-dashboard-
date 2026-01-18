@@ -4303,7 +4303,9 @@ button {
 
 .appointments-table-container {
   flex: 1 !important;
-  overflow: auto !important;
+  overflow-y: auto !important; /* Allow vertical scroll */
+  overflow-x: hidden !important; /* Prevent horizontal scroll */
+  width: 100% !important;
 }
 
 @media (max-width: 1200px) {

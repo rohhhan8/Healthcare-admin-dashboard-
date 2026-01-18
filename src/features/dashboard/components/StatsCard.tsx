@@ -91,7 +91,7 @@ interface ClinicStatusCardProps {
   rating: number;
 }
 
-export function ClinicStatusCard({ icon, clinicName, status, rating }: ClinicStatusCardProps) {
+export function ClinicStatusCard({ icon, clinicName, status }: ClinicStatusCardProps) {
   return (
     <Card className="stat-card stat-card-elevated clinic-status-card-modern">
       <div className="clinic-card-header">
