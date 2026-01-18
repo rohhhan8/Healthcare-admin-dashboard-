@@ -109,10 +109,7 @@ export function ClinicStatusCard({ icon, clinicName, status, rating }: ClinicSta
           <span className="status-dot"></span>
           {status}
         </div>
-        <div className="clinic-rating-row">
-          <span className="rating-star">★</span>
-          <span className="rating-value">{rating.toFixed(1)}</span>
-        </div>
+
       </div>
     </Card>
   );

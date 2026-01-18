@@ -1161,6 +1161,7 @@ button {
 .appointments-card {
   display: flex;
   flex-direction: column;
+  height: 300px;
   max-height: 380px;
 }
 
@@ -1232,6 +1233,7 @@ button {
 .gauge-container {
   position: relative;
   width: 160px;
+  height: 10px;
   text-align: center;
 }
 
@@ -2265,6 +2267,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-md);
+  height: 35vh;
 }
 
 .kpi-card {
@@ -2274,7 +2277,6 @@ button {
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .kpi-content {
@@ -2317,7 +2319,7 @@ button {
 .treemap-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 5px;
   min-height: 180px;
 }
 
@@ -2327,7 +2329,7 @@ button {
   justify-content: center;
   padding: var(--spacing-md);
   border-radius: var(--radius-md);
-  min-height: 80px;
+  height: 10px;
   transition: transform var(--transition-fast);
 }
 
@@ -2492,8 +2494,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-lg) var(--spacing-lg) 0; /* Add top/side padding, no bottom */
-  margin-bottom: var(--spacing-md);
+  padding: 9px; /* Add top/side padding, no bottom */
+  margin-bottom: 5px;
 }
 
 .card-header h3 {
@@ -4268,3 +4270,109 @@ button {
   line-height: 1 !important;
 }
 
+
+/* Dashboard Chart Grid Alignment - EQUAL HEIGHT FIX */
+.charts-grid {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr !important;
+  gap: var(--spacing-lg) !important;
+  margin-bottom:0;
+  align-items: stretch !important;
+}
+
+.weekly-chart-card,
+.appointments-card {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.weekly-chart-card .card-content,
+.appointments-card .card-content {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.weekly-line-chart {
+  flex: 1 !important;
+  min-height: 0 !important;
+  /* Ensure chart takes up space */
+  height: 100% !important;
+}
+
+.appointments-table-container {
+  flex: 1 !important;
+  overflow: auto !important;
+}
+
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Rating Gauge Polishing */
+.gauge-container-large {
+  transform: scale(0.85); /* Slightly smaller to fit better */
+  transform-origin: center bottom;
+  margin-bottom: 0px; /* Removed negative margin to prevent cutoff */
+  padding-bottom: 10px; /* Add padding to contain the label */
+}
+
+.rating-number-large {
+  font-size: 2rem !important;
+  margin-bottom: 4px !important;
+  display: inline-block;
+}
+
+.gauge-value-large {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 2px !important;
+  margin-top: -20px; /* Pull up values slightly into the arc */
+}
+
+.gauge-label-large {
+  margin-top: 8px; /* Standardize loading */
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+}
+
+/* KPI Grid Responsiveness */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-sm); /* Tightened gap */
+}
+
+.age-cost-card .treemap-container {
+  /* Prevent overflow on small screens */
+  min-height: 200px;
+  padding-bottom: 8px;
+}
+
+.age-cost-card .treemap-item {
+  flex: 1 1 45%; /* Allow wrapping */
+  min-width: 100px;
+}
+
+@media (max-width: 1366px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cols on laptop */
+  }
+}
+
+@media (max-width: 768px) {
+  .kpi-grid {
+    grid-template-columns: 1fr; /* 1 col on mobile */
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
