@@ -1,6 +1,6 @@
 # RagaAI B2B Healthcare Admin Dashboard
 
-![Design vs Implementation](/skeleton-wire.png)
+![Design vs Implementation](public/skeleton-wire.png)
 
 ![Deployment](https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge&logo=vercel)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)
