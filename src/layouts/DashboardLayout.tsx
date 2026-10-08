@@ -45,8 +45,8 @@ export function DashboardLayout() {
         {/* Sidebar Header */}
         <div className="sidebar-header">
           <div className="sidebar-brand">
-            {/* <div className="sidebar-brand-icon">R</div> */}
-            <span className="sidebar-brand-text">Raga Healthcare Systems</span>
+            {/* <div className="sidebar-brand-icon">C</div> */}
+            <span className="sidebar-brand-text">CarePulse Health Systems</span>
           </div>
         </div>
 
@@ -78,7 +78,7 @@ export function DashboardLayout() {
         {/* Company Branding */}
         <div className="sidebar-company">
           <span className="company-label">Admin Portal</span>
-          <span className="company-name">Raga Healthcare Systems</span>
+          <span className="company-name">CarePulse Health Systems</span>
         </div>
 
         {/* User Profile */}

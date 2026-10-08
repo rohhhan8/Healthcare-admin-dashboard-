@@ -19,7 +19,7 @@ export function LoginPage() {
   const error = useAppSelector(selectAuthError);
 
   const isAuthenticated = useAppSelector(selectIsAuthenticated);
-  const [email, setEmail] = useState('admin@raga.ai');
+  const [email, setEmail] = useState('admin@carepulse.health');
   const [password, setPassword] = useState('password');
 
   // Redirect if already authenticated
@@ -48,11 +48,11 @@ export function LoginPage() {
     // Simulate API call
     setTimeout(() => {
       // Mock successful login
-      if (email === 'admin@raga.ai' && password === 'password') {
+      if (email === 'admin@carepulse.health' && password === 'password') {
         dispatch(loginSuccess({
           user: {
             id: '1',
-            email: 'admin@raga.ai',
+            email: 'admin@carepulse.health',
             name: 'Dr. Rohan', // Customized for user
           },
           token: 'mock-jwt-token-123456',
@@ -74,7 +74,7 @@ export function LoginPage() {
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
           </div>
-          <h1 className="brand-name-large">Raga Healthcare Systems</h1>
+          <h1 className="brand-name-large">CarePulse Health Systems</h1>
         </div>
         <div className="login-quote">
           <p>"Transforming healthcare with advanced AI analytics."</p>
@@ -168,7 +168,7 @@ export function LoginPage() {
           </div>
           
           <div className="demo-credentials">
-            <small>Demo: admin@raga.ai / password</small>
+            <small>Demo: admin@carepulse.health / password</small>
           </div>
         </div>
       </div>

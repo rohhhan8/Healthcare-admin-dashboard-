@@ -1,4 +1,4 @@
-# RagaAI B2B Healthcare Admin Dashboard
+# CarePulse - Enterprise B2B Healthcare Admin Dashboard
 
 ![Design vs Implementation](public/skeleton-wire.png)
 
